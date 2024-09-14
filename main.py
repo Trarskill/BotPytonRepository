@@ -30,12 +30,9 @@ def change_command(message):
     bot.reply_to(message, f"I make is now {'ascii art' if funcbot else 'pencil sketch'}.")
 
 # оброботка текста
-@bot.message_handler(content_types= ['text'])
-def secretfunc(message):
-    # bot.send_message(message.chat.id, " я хочу пиццы 🍕 ")
-    """with open("ukraina.png", 'rb') as photo:
-        bot.send_photo(message.chat.id, photo)"""
-"""
+# @bot.message_handler(content_types= ['text'])
+# def secretfunc(message):
+
 # получение изображения и редактирование
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
@@ -73,5 +70,5 @@ def funcsketch(message):
     # Удаление временных файлов
     os.remove(image_file_path)
     os.remove("pencil_sketch.png")
-"""
+
 bot.polling()
